@@ -1,0 +1,241 @@
+<html>
+	<style>
+		table
+		{
+			border-collapse: collapse;
+		}
+		table.border
+		{
+			border: solid 1px #DBDBDB;
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+			font-weight: 300;
+			margin-left: 5px;
+		}
+		table.border tr td
+		{
+			padding: 3px 0 3px 0;
+			vertical-align: top;
+		}
+		table.border tr td.last
+		{
+			padding-right: 5px;
+		}
+		table.border tr.app th
+		{
+			background-color: #8D8D8D;
+			color: White;
+			font-size: 24px;
+			text-align: left;
+			vertical-align: top;
+			padding-left: 2px;
+			padding-top: 2px;
+		}
+		table.border tr.app th img
+		{
+			padding-top: 3px;
+			height: 24px;
+		}
+		table.border tr.section th
+		{
+			background-color: #ECECEC;
+			color: #8D8D8D;
+			font-size: 16px;
+			text-align: left;
+			vertical-align: top;
+			padding: 2px 0 2px 2px;
+		}		
+		table.border tr.section th span
+		{
+			float: right;;
+			font-size: 9px;
+			padding: 7px 2px 0 0;
+		}		
+		table.border tr.footer td
+		{
+			background-color: #ECECEC;
+			font-size: 11px;
+			text-align: left;
+			vertical-align: top;
+			padding: 2px 0 2px 2px;
+		}		
+		table.border tr td table.border tr td
+		{
+			padding: 2px 5px 2px 5px;
+			font-size: 11px;
+		}
+		table.border tr td table.border tr td p span
+		{
+			color: #9D9D9D;
+			font-size: 10px;
+		}
+
+		table.col1 { width: 235px; }
+		table.col2 { width: 215px; }
+		table.span { width: 455px; }
+		table tr td.row1 { height: 125px; }
+	</style>
+	<body>
+		<table class="border">
+			<tr class="app"><th colspan="2"><img src="markdown-icon.png"/> Markdown Syntax</th></tr>
+			<tr>
+				<td>
+					<table class="border col1">
+						<tr class="section"><th>Headers</th></tr>
+						<tr>
+							<td class="row1">
+								<p>
+									This is an H1<br/>
+									=============
+								</p>
+								<p>
+									This is an H2<br/>
+									-------------
+								</p>
+								<p>
+									# This is an H1<br/>
+									## This is an H2<br/>
+									###### This is an H6<br/>
+									<span>Close headers with as many hashes as you like</span>
+								</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td class="last">
+					<table class="border col2">
+						<tr class="section"><th>General Formatting</th></tr>
+						<tr>
+							<td class="row1">
+								<p>*Emphasis* _Emphasis_</p>
+								<p>**Strong** __Strong__</p>
+								<p>Insert &lt;br /&gt;: <img style="height: 10px;" src="markdown-linefeed.png"/></p>
+								<p>
+									Blockquote: &gt;<br/>
+									<span>Use multiple &gt; for nested blockquotes</span>
+								</p>
+								<p>Horizontal Rule: *** | * * * | --- | - - -</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table class="border span">
+						<tr class="section"><th>Links</th></tr>
+						<tr>
+							<td>
+								<table style="width: 100%">
+									<tr>
+										<td width="50%">
+											<p>Inline Link</p>
+											<p>Reference Link</p>
+										</td>
+										<td width="50%">
+											<p>[Anchor Text](URL "Title")</p>
+											<p>[Anchor Text][ID]</p>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding-bottom: 5px;" colspan="2"><p><span>Omit ID for implicit reference, i.e. reference ID=anchor text</span></p></td>
+									</tr>
+									<tr>
+										<td>
+											<p>Reference Definition</p>
+										</td>
+										<td>
+											<p>[ID]: URL "Title"</p>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding-bottom: 5px;" colspan="2"><p><span>Case-insensitive alphanumeric characters, spaces and punctuation for ID</span></p></td>
+									</tr>
+									<tr>
+										<td>
+											<p>Automatic Link</p>
+										</td>
+										<td>
+											<p>&lt;http://www.example.com/&gt;</p>
+											<p>&lt;mail@example.com/&gt;</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>			
+			<tr>
+				<td rowspan="2">
+					<table class="border col1">
+						<tr class="section"><th>Lists<span>Begin and end lists with a blank line.</span></th></tr>
+						<tr>
+							<td style="height: 152px;">
+								<table style="width: 100%">
+									<tr>
+										<td width="50%">
+											<p>Unordered List</p>
+											<p>Ordered List</p>
+										</td>
+										<td width="50%">
+											<p>* | + | -<p>
+											<p>n.(space(s)|tab)</p>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding-bottom: 5px;" colspan="2"><p><span>n can be any number, start lists with 1.<br/><br/><b>Rules:</b> Indent paragraphs by 4 spaces or 1 tab, code blocks by 8 spaces or 2 tabs, escape a period following a number at begginging of line (1986\. What a great season.)</span></p></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td class="last">
+					<table class="border col2">
+						<tr class="section"><th>Images</th></tr>
+						<tr>
+							<td>
+								<p>Inline: ![Alt Text](URL "Title")</p>
+								<p>Reference: ![Alt Text][ID]</p>
+								<p>Reference Definition: [ID]: URL "Title"</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="last">
+					<table class="border col2">
+						<tr class="section"><th>Code</th></tr>
+						<tr>
+							<td>
+								<p>Code Block: indent by 4 spaces or 1 tab<br/><span style="font-size: 9px;">&amp; and &lt;&gt; automatically converted to HTML entities</span></p>
+								<p>Inline Code: `code`<br/><span>Use `` for literal backticks</span></p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table class="border span">
+						<tr class="footer">
+							<td>
+								<table style="width: 100%">
+									<tr>
+										<td width="50%">
+											<p>Backslash-escapable characters:</p>
+										</td>
+										<td width="50%">
+											<p>\ ` * _ { } [ ] # + - . !</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>			
+		</table>
+	</body>
+</html>
